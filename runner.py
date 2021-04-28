@@ -12,17 +12,34 @@ def run(args):
         os.mkdir('outputs')
 
     # Prepare dataloaders
-    train_dataset, val_dataset = dataloaders.base.__dict__[args.dataset](args.dataroot, args.train_aug)
-    if args.n_permutation>0:
-        train_dataset_splits, val_dataset_splits, task_output_space = PermutedGen(train_dataset, val_dataset,
-                                                                             args.n_permutation,
-                                                                             remap_class=not args.no_class_remap)
-    else:
-        train_dataset_splits, val_dataset_splits, task_output_space = SplitGen(train_dataset, val_dataset,
-                                                                          first_split_sz=args.first_split_size,
-                                                                     other_split_sz=args.other_split_size,
-                                                                          rand_split=args.rand_split,
-                                                                          remap_class=not args.no_class_remap)
+
+    train_dataset_splits = {}
+    val_dataset_splits = {}
+    task_output_space = {}
+    pre_count = 0
+    accu_dataset_len = 0
+    for i in range(len(args.dataset)):
+        train_dataset, val_dataset = dataloaders.base.__dict__[args.dataset[i]](args.dataroot, args.train_aug)
+        cur_pre_count = 0
+        if args.n_permutation > 0:
+            cur_train_dataset_splits, cur_val_dataset_splits, cur_task_output_space = PermutedGen(train_dataset, val_dataset,
+                                                                                 args.n_permutation,
+                                                                                 remap_class=not args.no_class_remap)
+        else:
+            cur_train_dataset_splits, cur_val_dataset_splits, cur_task_output_space, cur_pre_count = SplitGen(train_dataset, val_dataset, accu_dataset_len, pre_count,
+                                                                              first_split_sz=args.first_split_size,
+                                                                         other_split_sz=args.other_split_size,
+                                                                              rand_split=args.rand_split,
+                                                                              remap_class=not args.no_class_remap)
+
+        for index in range(len(cur_train_dataset_splits)):
+            train_dataset_splits[str(index + pre_count + 1)] = cur_train_dataset_splits[str(index + 1)]
+            val_dataset_splits[str(index + pre_count + 1)] = cur_val_dataset_splits[str(index + 1)]
+            task_output_space[str(index + pre_count + 1)] = cur_task_output_space[str(index + 1)]
+
+        pre_count = cur_pre_count
+        accu_dataset_len += train_dataset.number_classes
+
 
     # Prepare the Agent (model)
     agent_config = {'lr': args.lr, 'momentum': args.momentum, 'weight_decay': args.weight_decay,'schedule': args.schedule,

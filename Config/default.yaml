@@ -1,15 +1,15 @@
 gpuid: [0]
 model_type: resnet
-model_name: ResNet34
-force_out_dim: 2
+model_name: ResNet110_cifar
+force_out_dim: 0
 agent_type: regularization
 agent_name: EWC
 optimizer: SGD
 dataroot: 'data'
-dataset: 'MNIST'
+dataset: ['CIFAR10', 'CIFAR100']
 n_permutation: 0
-first_split_size: 2
-other_split_size: 2
+first_split_size: 5
+other_split_size: 5
 no_class_remap: False
 train_aug: False
 rand_split: False

@@ -7,11 +7,11 @@ class CacheClassLabel(data.Dataset):
     """
     A dataset wrapper that has a quick access to all labels of data.
     """
-    def __init__(self, dataset):
+    def __init__(self, dataset, name):
         super(CacheClassLabel, self).__init__()
         self.dataset = dataset
         self.labels = torch.LongTensor(len(dataset)).fill_(-1)
-        label_cache_filename = path.join(dataset.root, 'MINST'''+'_'+str(len(dataset))+'.pth')
+        label_cache_filename = path.join(dataset.root, name +'_'+str(len(dataset))+'.pth')
         if path.exists(label_cache_filename):
             self.labels = torch.load(label_cache_filename)
         else:
@@ -72,6 +72,7 @@ class Subclass(data.Dataset):
         return len(self.indices)
 
     def __getitem__(self, index):
+        temp = self.indices[index]
         img,target = self.dataset[self.indices[index]]
         if self.remap:
             raw_target = target.item() if isinstance(target,torch.Tensor) else target

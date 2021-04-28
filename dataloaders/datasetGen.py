@@ -3,7 +3,7 @@ from random import shuffle
 from .wrapper import Subclass, AppendName, Permutation
 
 
-def SplitGen(train_dataset, val_dataset, first_split_sz=2, other_split_sz=2, rand_split=False, remap_class=False):
+def SplitGen(train_dataset, val_dataset, accu_dataset_len ,pre_count, first_split_sz=2, other_split_sz=2, rand_split=False, remap_class=True):
     '''
     Generate the dataset splits based on the labels.
     :param train_dataset: (torch.utils.data.dataset)
@@ -17,6 +17,15 @@ def SplitGen(train_dataset, val_dataset, first_split_sz=2, other_split_sz=2, ran
     assert train_dataset.number_classes == val_dataset.number_classes,'Train/Val has different number of classes'
     num_classes = train_dataset.number_classes
 
+    train_dataset.labels += accu_dataset_len
+    for i in range(len(train_dataset.dataset.train_labels)):
+        train_dataset.dataset.train_labels[i] += accu_dataset_len
+
+    val_dataset.labels += accu_dataset_len
+
+    for i in range(len(val_dataset.dataset.test_labels)):
+        val_dataset.dataset.test_labels[i] += accu_dataset_len
+
     # Calculate the boundary index of classes for splits
     # Ex: [0,2,4,6,8,10] or [0,50,60,70,80,90,100]
     split_boundaries = [0, first_split_sz]
@@ -28,10 +37,10 @@ def SplitGen(train_dataset, val_dataset, first_split_sz=2, other_split_sz=2, ran
     # Assign classes to each splits
     # Create the dict: {split_name1:[2,6,7], split_name2:[0,3,9], ...}
     if not rand_split:
-        class_lists = {str(i):list(range(split_boundaries[i-1],split_boundaries[i])) for i in range(1,len(split_boundaries))}
+        class_lists = {str(i):list(range(split_boundaries[i-1] + accu_dataset_len,split_boundaries[i] + accu_dataset_len)) for i in range(1,len(split_boundaries))}
     else:
         randseq = torch.randperm(num_classes)
-        class_lists = {str(i):randseq[list(range(split_boundaries[i-1],split_boundaries[i]))].tolist() for i in range(1,len(split_boundaries))}
+        class_lists = {str(i):randseq[list(range(split_boundaries[i-1] + accu_dataset_len,split_boundaries[i] + accu_dataset_len))].tolist() for i in range(1, len(split_boundaries))}
     print(class_lists)
 
     # Generate the dicts of splits
@@ -40,11 +49,14 @@ def SplitGen(train_dataset, val_dataset, first_split_sz=2, other_split_sz=2, ran
     val_dataset_splits = {}
     task_output_space = {}
     for name,class_list in class_lists.items():
-        train_dataset_splits[name] = AppendName(Subclass(train_dataset, class_list, remap_class), name)
-        val_dataset_splits[name] = AppendName(Subclass(val_dataset, class_list, remap_class), name)
+        name_int = int(name) + pre_count
+        train_dataset_splits[name] = AppendName(Subclass(train_dataset, class_list, remap_class), str(name_int))
+        val_dataset_splits[name] = AppendName(Subclass(val_dataset, class_list, remap_class), str(name_int))
         task_output_space[name] = len(class_list)
 
-    return train_dataset_splits, val_dataset_splits, task_output_space
+    pre_count = len(split_boundaries) + pre_count - 1
+
+    return train_dataset_splits, val_dataset_splits, task_output_space, pre_count
 
 
 def PermutedGen(train_dataset, val_dataset, n_permute, remap_class=False):

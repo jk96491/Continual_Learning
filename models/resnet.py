@@ -65,7 +65,7 @@ class PreActBottleneck(nn.Module):
 
 
 class PreActResNet(nn.Module):
-    def __init__(self, block, num_blocks, num_classes=10, in_channels=1):
+    def __init__(self, block, num_blocks, num_classes=110, in_channels=3):
         super(PreActResNet, self).__init__()
         self.in_planes = 64
         last_planes = 512*block.expansion
@@ -94,7 +94,7 @@ class PreActResNet(nn.Module):
         out = self.stage4(out)
         return out
 
-    def logits(self, x):
+    def logits_fn(self, x):
         x = self.last(x)
         return x
 
@@ -102,7 +102,7 @@ class PreActResNet(nn.Module):
         x = self.features(x)
         x = F.relu(self.bn_last(x))
         x = F.adaptive_avg_pool2d(x, 1)
-        x = self.logits(x.view(x.size(0), -1))
+        x = self.logits_fn(x.view(x.size(0), -1))
         return x
 
 
@@ -168,7 +168,7 @@ def ResNet20_cifar(out_dim=10):
 def ResNet56_cifar(out_dim=10):
     return PreActResNet_cifar(PreActBlock, [9 , 9 , 9 ], [16, 32, 64], num_classes=out_dim)
 
-def ResNet110_cifar(out_dim=10):
+def ResNet110_cifar(out_dim=110):
     return PreActResNet_cifar(PreActBlock, [18, 18, 18], [16, 32, 64], num_classes=out_dim)
 
 def ResNet29_cifar(out_dim=10):

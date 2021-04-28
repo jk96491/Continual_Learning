@@ -1,0 +1,6 @@
+torch>=0.4.1
+torchvision>=0.2.1
+PyYAML==5.4.1
+argparse
+quadprog
+

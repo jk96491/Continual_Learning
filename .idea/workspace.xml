@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6891dea6-6c0d-4ba8-b3ae-538a4598cff9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1rmTgFH89kqm9xnlITgtzSnvZSP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.iBatchLearn">
+    <configuration name="base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Continual-Learning-Benchmark-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dataloaders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataloaders/base.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="iBatchLearn" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Continual-Learning-Benchmark-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iBatchLearn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="wrapper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Continual-Learning-Benchmark-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dataloaders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataloaders/wrapper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.iBatchLearn" />
+        <item itemvalue="Python.wrapper" />
+        <item itemvalue="Python.base" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6891dea6-6c0d-4ba8-b3ae-538a4598cff9" name="Default Changelist" comment="" />
+      <created>1619580374183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619580374183</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1136" height="466" key="DebuggerActiveHint" timestamp="1619594850227">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1136" height="466" key="DebuggerActiveHint/1920.-9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619594850227" />
+    <state width="1415" height="466" key="DebuggerActiveHint/1920.-9.1920.1040/0.0.1920.1040@1920.-9.1920.1040" timestamp="1619594580265" />
+    <state width="1899" height="316" key="GridCell.Tab.0.bottom" timestamp="1619608600947">
+      <screen x="1920" y="-9" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/1920.-9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619595975050" />
+    <state width="1899" height="316" key="GridCell.Tab.0.bottom/1920.-9.1920.1040/0.0.1920.1040@1920.-9.1920.1040" timestamp="1619608600947" />
+    <state width="1899" height="316" key="GridCell.Tab.0.center" timestamp="1619608600946">
+      <screen x="1920" y="-9" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.center/1920.-9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619595975050" />
+    <state width="1899" height="316" key="GridCell.Tab.0.center/1920.-9.1920.1040/0.0.1920.1040@1920.-9.1920.1040" timestamp="1619608600946" />
+    <state width="1899" height="316" key="GridCell.Tab.0.left" timestamp="1619608600946">
+      <screen x="1920" y="-9" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.left/1920.-9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619595975050" />
+    <state width="1899" height="316" key="GridCell.Tab.0.left/1920.-9.1920.1040/0.0.1920.1040@1920.-9.1920.1040" timestamp="1619608600946" />
+    <state width="1899" height="316" key="GridCell.Tab.0.right" timestamp="1619608600947">
+      <screen x="1920" y="-9" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.right/1920.-9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619595975050" />
+    <state width="1899" height="316" key="GridCell.Tab.0.right/1920.-9.1920.1040/0.0.1920.1040@1920.-9.1920.1040" timestamp="1619608600947" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1619580460524">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/1920.-9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619580460524" />
+    <state x="332" y="0" width="1544" height="1027" maximized="true" key="dock-window-1" timestamp="1619592728892">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="332" y="0" width="1544" height="1027" maximized="true" key="dock-window-1/1920.-9.1920.1040/0.0.1920.1040@1920.-9.1920.1040" timestamp="1619592728892" />
+    <state x="212" y="0" width="1544" height="1027" maximized="true" key="dock-window-2" timestamp="1619593713752">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="212" y="0" width="1544" height="1027" maximized="true" key="dock-window-2/1920.-9.1920.1040/0.0.1920.1040@1920.-9.1920.1040" timestamp="1619593713752" />
+    <state x="-8" y="-8" width="1544" height="1027" maximized="true" key="dock-window-3" timestamp="1619594102001">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-8" y="-8" width="1544" height="1027" maximized="true" key="dock-window-3/1920.-9.1920.1040/0.0.1920.1040@1920.-9.1920.1040" timestamp="1619594102001" />
+    <state x="282" y="92" width="1544" height="1027" maximized="true" key="dock-window-4" timestamp="1619594511821">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="282" y="92" width="1544" height="1027" maximized="true" key="dock-window-4/1920.-9.1920.1040/0.0.1920.1040@1920.-9.1920.1040" timestamp="1619594511821" />
+    <state x="1912" y="-17" width="1544" height="683" maximized="true" key="dock-window-5" timestamp="1619595405702">
+      <screen x="1920" y="-9" width="1920" height="1040" />
+    </state>
+    <state x="1912" y="-17" width="1544" height="683" maximized="true" key="dock-window-5/1920.-9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619595405702" />
+    <state x="2573" y="242" width="613" height="538" key="find.popup" timestamp="1619593384332">
+      <screen x="1920" y="-9" width="1920" height="1040" />
+    </state>
+    <state x="653" y="251" width="613" height="538" key="find.popup/1920.-9.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1619582149299" />
+    <state x="2573" y="242" width="613" height="538" key="find.popup/1920.-9.1920.1040/0.0.1920.1040@1920.-9.1920.1040" timestamp="1619593384332" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataloaders/datasetGen.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataloaders/datasetGen.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataloaders/datasetGen.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataloaders/datasetGen.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

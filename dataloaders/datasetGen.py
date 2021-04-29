@@ -18,13 +18,13 @@ def SplitGen(train_dataset, val_dataset, accu_dataset_len ,pre_count, first_spli
     num_classes = train_dataset.number_classes
 
     train_dataset.labels += accu_dataset_len
-    for i in range(len(train_dataset.dataset.train_labels)):
-        train_dataset.dataset.train_labels[i] += accu_dataset_len
+    for i in range(len(train_dataset.dataset.targets)):
+        train_dataset.dataset.targets[i] += accu_dataset_len
 
     val_dataset.labels += accu_dataset_len
 
-    for i in range(len(val_dataset.dataset.test_labels)):
-        val_dataset.dataset.test_labels[i] += accu_dataset_len
+    for i in range(len(val_dataset.dataset.targets)):
+        val_dataset.dataset.targets[i] += accu_dataset_len
 
     # Calculate the boundary index of classes for splits
     # Ex: [0,2,4,6,8,10] or [0,50,60,70,80,90,100]

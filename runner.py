@@ -33,9 +33,9 @@ def run(args):
                                                                               remap_class=not args.no_class_remap)
 
         for index in range(len(cur_train_dataset_splits)):
-            train_dataset_splits[str(index + pre_count + 1)] = cur_train_dataset_splits[str(index + 1)]
-            val_dataset_splits[str(index + pre_count + 1)] = cur_val_dataset_splits[str(index + 1)]
-            task_output_space[str(index + pre_count + 1)] = cur_task_output_space[str(index + 1)]
+            train_dataset_splits[str(index + pre_count + 1)] = cur_train_dataset_splits[str(index + pre_count+ 1)]
+            val_dataset_splits[str(index + pre_count + 1)] = cur_val_dataset_splits[str(index + pre_count + 1)]
+            task_output_space[str(index + pre_count + 1)] = cur_task_output_space[str(index + pre_count + 1)]
 
         pre_count = cur_pre_count
         accu_dataset_len += train_dataset.number_classes

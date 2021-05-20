@@ -50,9 +50,10 @@ def SplitGen(train_dataset, val_dataset, accu_dataset_len ,pre_count, first_spli
     task_output_space = {}
     for name,class_list in class_lists.items():
         name_int = int(name) + pre_count
-        train_dataset_splits[name] = AppendName(Subclass(train_dataset, class_list, remap_class), str(name_int))
-        val_dataset_splits[name] = AppendName(Subclass(val_dataset, class_list, remap_class), str(name_int))
-        task_output_space[name] = len(class_list)
+        rename = str(name_int)
+        train_dataset_splits[rename] = AppendName(Subclass(train_dataset, class_list, remap_class), rename)
+        val_dataset_splits[rename] = AppendName(Subclass(val_dataset, class_list, remap_class), rename)
+        task_output_space[rename] = len(class_list)
 
     pre_count = len(split_boundaries) + pre_count - 1
 
